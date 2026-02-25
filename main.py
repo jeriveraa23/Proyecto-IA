@@ -34,7 +34,7 @@ class SistemaFinanciero:
             print("-"*30)
         
         except Exception as e:
-            print(f"\nERROR REAL: {e}")
+            print(f"\nERROR: {e}")
 
 if __name__ == "__main__":
     app = SistemaFinanciero()
