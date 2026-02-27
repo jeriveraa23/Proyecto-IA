@@ -1,6 +1,7 @@
 import numpy as np
 import skfuzzy as fuzz
 from skfuzzy import control as ctrl
+import matplotlib.pyplot as plt
 
 class MotorDifuso:
     def __init__(self):
@@ -51,6 +52,13 @@ class MotorDifuso:
         try:
             self.simulador.compute()
             puntos = self.simulador.output['score']
+
+            self.ingresos.view(sim=self.simulador)
+            self.estabilidad.view(sim=self.simulador)
+            self.score.view(sim=self.simulador)
+
+            plt.show(block=False)
+
         except:
             puntos = 0
 
